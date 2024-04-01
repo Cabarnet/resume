@@ -8,6 +8,9 @@ document.addEventListener('mousemove', e => {
 })
 
 window.addEventListener('load', () => {
+    let vh = window.innerHeight * 0.01;
+    $(".layers__container").css("--vh", `${vh}px`);
+
     $(".layer-1").css({"inset": "30vh 0vw", "transition": "0s"});
     $(".main-content").css({"display": "none", "opacity": 0});
     setTimeout(() => {
