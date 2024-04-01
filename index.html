@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ruslan web-developer</title>
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/ARIcon.png"/>
+	<script	src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+
+
+	<section class="layers">	 
+		<div class="layers__container">
+			<div class="layers__item layer-1"></div>
+			<div class="layers__item layer-2"></div>
+			<div class="layers__item layer-3">
+				<div class="main-content">
+					<div class="main-content__upper">
+						<button class="button-main top" onclick="toTop()">
+							<div class="button-main__text">About me</div>
+							<svg viewBox="0 0 5 9" style="transform: rotate(270deg); width: 12px; margin: 0px 10px 10px 10px;">
+								<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+							</svg>
+						</button>
+					</div>
+					<div class="main-content__middle">
+						<button class="button-main left" onclick="toLeft()">
+							<div class="button-main__text">Skills</div>
+							<svg viewBox="0 0 5 9" style="transform: rotate(180deg); width: 12px; margin: 3px 15px 5px 0px;">
+								<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+							</svg>
+						</button>
+						<div class="main-content__middle__center">
+							<h1>Akhmetov Ruslan <span>Web-developer</span></h1>
+							<div>
+								<a href="https://t.me/ruslanchikil">
+									<img src="img/TelegramWhite.png" alt="telegram">
+								</a>
+								<a href="https://github.com/Cabarnet">
+									<img src="img/GitHubWhite.png" alt="github">
+								</a>
+								<a href="mailto: vopros.tvoy@gmail.com">gmail</a>
+							</div>
+						</div>
+						<button class="button-main right" onclick="toRight(); musicPlayer()">
+							<div class="button-main__text">Music</div>
+							<svg viewBox="0 0 5 9" style="width: 12px; margin: 3px 0px 5px 15px;">
+								<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+							</svg>
+						</button>
+					</div>
+					<div class="main-content__bottom">
+						<button class="button-main bottom" onclick="toBottom()">
+							<div class="button-main__text">Portfolio</div>
+							<svg viewBox="0 0 5 9" style="transform: rotate(90deg); width: 12px; margin: 10px 10px 0px 10px;">
+								<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+							</svg>
+						</button>
+					</div>
+
+				</div>
+
+				<div class="about-content">
+					<div></div>
+					<div>
+						<h2 class="about-content__el">About me</h2>
+						<div class="container">
+							<p class="about-content__el">
+								Hi! My name is Ruslan, and I am an aspiring web developer who aspires to,
+								to turn your interest in design into a productive career.
+							</p>
+							<p class="about-content__el">
+								My efforts are aimed at acquiring the skills to create high-quality websites that are not only attractive, but also user-friendly.
+								I strive to ensure that my design primarily meets the needs of users, making their interaction with the website more efficient and enjoyable.
+							</p>
+							<p class="about-content__el">
+								My approach to work is characterized by balanced learning and applied projects that allow me to gradually improve my skills.
+								I am ready for new challenges, strive to understand modern design trends and am interested in learning from those who have extensive experience in web development.
+							</p>
+						</div>
+					</div>
+					<button class="button-main bottom about-content__el" onclick="toMainPage()">
+						<div class="button-main__text">Main Page</div>
+						<svg viewBox="0 0 5 9" style="transform: rotate(90deg); width: 12px; margin: 10px 10px 0px 10px;">
+							<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="skills-content">
+					<div style="width: 10%;"></div>
+					<div class="container">
+						<div>
+							<h3 class="skills-content__el">Hard Skills: </h3>
+							<p class="skills-content__el">Html</p>
+							<p class="skills-content__el">Css</p>
+							<p class="skills-content__el">JavaScript</p>
+							<p class="skills-content__el">Jquery</p>
+							<p class="skills-content__el">Figma</p>
+							<p class="skills-content__el">anime.js</p>
+							<p class="skills-content__el">Git</p>
+							<p class="skills-content__el">React</p>
+							<p class="skills-content__el">Php</p>
+							<p class="skills-content__el">Yii2</p>
+						</div>
+						<hr class="skills-content__el">
+						<div>
+							<h3 class="skills-content__el">Soft Skills: </h3>
+							<p class="skills-content__el">English: B1 (intermediate)</p>
+							<p class="skills-content__el">Teamwork</p>
+							<p class="skills-content__el">Multitasking</p>
+							<p class="skills-content__el">High Performance</p>
+							<p class="skills-content__el">Active communication</p>
+							<p class="skills-content__el">Thinking Creatively</p>
+							<p class="skills-content__el">Desire to learn</p>
+							<p class="skills-content__el">Fast learning</p>
+						</div>
+						<hr class="skills-content__el">
+						<div>
+							<h3 class="skills-content__el">Work Experience: </h3>
+							<p class="skills-content__el">Junior Web-developer</p>
+							<p class="skills-content__el">"Unique Technologies"</p>
+							<p class="skills-content__el">12 / 2023 - Present</p>
+						</div>
+					</div>
+					<button class="button-main right" onclick="toMainPage()">
+						<div class="button-main__text">Main page</div>
+						<svg viewBox="0 0 5 9" style="width: 12px; margin: 3px 0px 5px 15px;">
+							<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="music-content">
+					<button class="button-main left" onclick="toMainPage()">
+						<div class="button-main__text">Main page</div>
+						<svg viewBox="0 0 5 9" style="transform: rotate(180deg); width: 12px; margin: 3px 15px 5px 0px;">
+							<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+						</svg>
+					</button>
+					<div>
+						<h2 class="music-content__el">Music</h2>
+						<div class="container">
+
+							<p class="music-content__el heading">Classic</p>
+							<div class="music-content__el audio-player">
+								<p>Mozart - Lacrimosa</p>
+								<audio id="audio1" src="audio/Mozart - Lacrimosa.mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio1">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio1" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio1">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio1">
+								</div>
+							</div>
+							<div class="music-content__el audio-player">
+								<p>Tchaikovsky - Swan Lake</p>
+								<audio id="audio2" src="audio/Tchaikovsky - Swan Lake (128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio2">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio2" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio2">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio2">
+								</div>
+							</div>
+
+							<p class="music-content__el heading">Rock</p>
+							<div class="music-content__el audio-player">
+								<p>The Beatles - Let It Be</p>
+								<audio id="audio3" src="audio/Paul McCartney - Let It Be (128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio3">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio3" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio3">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio3">
+								</div>
+							</div>
+							<div class="music-content__el audio-player">
+								<p>AC/DC - Back In Black</p>
+								<audio id="audio4" src="audio/AC_DC - Back In Black (128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio4">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio4" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio4">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio4">
+								</div>
+							</div>
+
+							<p class="music-content__el heading">Pop</p>
+							<div class="music-content__el audio-player">
+								<p>Adele - Rolling in the Deep</p>
+								<audio id="audio5" src="audio/Adele - Rolling in the Deep(128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio5">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio5" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio5">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio5">
+								</div>
+							</div>
+							<div class="music-content__el audio-player">
+								<p>Panic! At The Disco - High Hopes</p>
+								<audio id="audio6" src="audio/Panic! At The Disco - High Hopes (128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio6">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio6" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio6">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio6">
+								</div>
+							</div>
+
+							<p class="music-content__el heading">Hip-hop</p>
+							<div class="music-content__el audio-player">
+								<p>Eminem - Lose Yourself</p>
+								<audio id="audio7" src="audio/Eminem - Lose Yourself(128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio7">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio7" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio7">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio7">
+								</div>
+							</div>
+							<div class="music-content__el audio-player">
+								<p>NF - When I Grow Up</p>
+								<audio id="audio8" src="audio/NF - When I Grow Up (128 kbps).mp3" preload="metadata"></audio>
+								<div class="controls">
+									<button class="playBtn" data-audio="audio8">&#9658;</button>
+									<button class="pauseBtn" data-audio="audio8" style="display: none;">&#10074;&#10074;</button>
+									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio8">
+									<img src="img/icons8-speaker-24.png" alt="speaker"/>
+									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio8">
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div></div>
+				</div>
+
+				<div class="portfolio-content">
+					<button class="button-main top portfolio-content__el" onclick="toMainPage()">
+						<div class="button-main__text">Main Page</div>
+						<svg viewBox="0 0 5 9" style="transform: rotate(270deg); width: 12px; margin: 0px 10px 10px 10px;">
+							<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
+						</svg>
+					</button>
+					<div>
+						<h2 class="portfolio-content__el">Portfolio</h2>
+						<div class="container">
+							<a class="portfolio-content__el">
+								<img src="img/Снимок экрана (554).png" alt="Project">
+								<p>Weather</p>
+							</a>
+							<a class="portfolio-content__el">
+								<img src="img/Снимок экрана (555).png" alt="Project">
+								<p>Bon appetite</p>
+							</a>
+							<a class="portfolio-content__el">
+								<img src="img/Снимок экрана (556).png" alt="Project">
+								<p>Basketball</p>
+							</a>
+						</div>
+					</div>
+					<div></div>
+				</div>
+			</div>
+			<!-- <div class="layers__item layer-4"></div> -->
+		</div>
+	</section>
+
+	<!-- <div style="height: 100vh;"></div> -->
+</body>
+</html>
