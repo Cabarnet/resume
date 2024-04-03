@@ -97,6 +97,24 @@ function toMainPage () {
     $(".layer-2").removeAttr('style');
 }
 
+
+function openPortfolioWeather() {
+    $(".portfolio-content__el").css("display", "none");
+    $("#weather").css("display", "flex");
+    $(".portfolio-close").css("display", "block");
+    anime({
+        targets: '.portfolio-close',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+    });
+}
+
+function closePortfolio() {
+    $(".portfolio-content__el").css("display", "");
+    $("#weather").removeAttr('style');
+    $(".portfolio-close").removeAttr('style');
+}
+
 function musicPlayer() {
     const playBtns = document.querySelectorAll('.playBtn');
     const pauseBtns = document.querySelectorAll('.pauseBtn');

@@ -258,18 +258,38 @@
 					<div>
 						<h2 class="portfolio-content__el">Portfolio</h2>
 						<div class="container">
-							<a class="portfolio-content__el">
-								<img src="img/Снимок экрана (554).png" alt="Project">
-								<p>Weather</p>
-							</a>
-							<a class="portfolio-content__el">
-								<img src="img/Снимок экрана (555).png" alt="Project">
-								<p>Bon appetite</p>
-							</a>
-							<a class="portfolio-content__el">
-								<img src="img/Снимок экрана (556).png" alt="Project">
-								<p>Basketball</p>
-							</a>
+							<button class="portfolio-close" onclick="closePortfolio()"></button>
+
+							<button class="portfolio-content__el" onclick="openPortfolioWeather()">
+								<p class="header">Weather</p>
+							</button>
+							<div class="portfolio-item" id="weather">
+								<h3>Weather</h3>
+								<img src="img/Снимок экрана (554).png" alt="Weather">
+								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
+									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
+								<a> </a>
+							</div>
+
+							<button class="portfolio-content__el" onclick="openPortfolioAppetite()">
+								<p class="header">Bon appetite</p>
+							</button>
+							<div class="portfolio-item" id="appetite">
+								<h3>Bon appetite</h3>
+								<img src="img/Снимок экрана (555).png" alt="Bon appetite">
+								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
+									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
+							</div>
+
+							<button class="portfolio-content__el">
+								<p class="header">Basketball</p>
+							</button>
+							<div class="portfolio-item" id="basketball" onclick="openPortfolioBasketball()">
+								<h3>Basketball</h3>
+								<img src="img/Снимок экрана (556).png" alt="Basketball">
+								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
+									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
+							</div>
 						</div>
 					</div>
 					<div></div>
