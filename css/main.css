@@ -465,7 +465,7 @@ body {
 
 @media (max-width: 769px) {
 	.main-content {
-		padding: calc(var(--index)* .5);
+		padding: calc(var(--index)* 1.5) calc(var(--index)* .5);
 	}
 
 	.button-main {
