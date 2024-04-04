@@ -24,6 +24,11 @@ window.addEventListener('load', () => {
     });
 })
 
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    $(".layers__container").css("--vh", `${vh}px`);
+});
+
 function toLeft () {
     $(".main-content").css({"display": "none", "opacity": 0});
     $(".layer-1").css({"inset": "-10vw -10vw -10vw 0vw", "filter": "blur(3px)"});

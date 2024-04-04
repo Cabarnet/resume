@@ -7,7 +7,7 @@
 :root {
 	--index: calc(1vh + 1vw);
 	--transition: 1.5s cubic-bezier(0.030, 0.235, 0.005, 0.990);
-	--transition-soft: 2s cubic-bezier(.81,.74,.45,.99);
+	--transition-soft: 1.5s cubic-bezier(.81,.74,.45,.99);
 }
 
 @font-face {
@@ -62,11 +62,11 @@ body {
 	transition: var(--transition);
 }
 
-.layer-2 {
+/* .layer-2 {
 	background-image: url(../img/чайка2.png);
 	transform: translateZ(10px) scale(0.6);
 	transition: var(--transition-soft);
-}
+} */
 
 .layer-3 {
 	transform: translateZ(180px) scale(0.8);
@@ -458,14 +458,55 @@ body {
 
 @media (max-width: 1080px) {
 	.layers__container {
-		height: 100vh; /* Fallback for browsers that do not support Custom Properties */
 		height: calc(var(--vh, 1vh) * 100);
+		/* transform-style: unset; */
+		transform: unset;
+		will-change: unset;
+	}
+
+	.container {
+		padding: 0;
+	}
+
+	.main-content__middle__center div {
+		height: calc(var(--index)* 1.6);
+	}
+
+	.main-content__middle__center a {
+		font-size: calc(var(--index)* 1.6);
+	}
+
+	.about-content h2 {
+		font-size: calc(var(--index)* 2.5);
+	}
+
+	.about-content p {
+		font-size: calc(var(--index)* 1.35);
+	}
+
+	.skills-content .container {
+		width: max-content;
+		height: max-content;
+		padding: 0px calc(var(--index)* 0.5);
+	}
+
+	.skills-content h3 {
+		font-size: calc(var(--index)* 1.2);
+	}
+
+	.skills-content p {
+		font-size: calc(var(--index)* 1);
+		background: #00000090;
+		padding: 7px 15px;
+		border-radius: 6px;
 	}
 }
 
+
+
 @media (max-width: 769px) {
 	.main-content {
-		padding: calc(var(--index)* 1.5) calc(var(--index)* .5);
+		padding: calc(var(--index)* 1.5) calc(var(--index)* .1);
 	}
 
 	.button-main {
@@ -481,9 +522,44 @@ body {
 		writing-mode: tb-rl;
 		transform: rotate(-180deg);
 	}
+	
+	.skills-content {
+		width: 100vw;
+		padding: 10px calc(var(--index)* 0.5);
+	}
+	
+	.skills-content hr{
+		display: none;
+	}
+
+	.music-content {
+		padding: 10px calc(var(--index) * .8);
+	}
+
+	.music-content__el.heading {
+		background: linear-gradient(90deg, transparent 25%, #004e85 35%, #00121e 65%, transparent 75%);
+	}
 
 	.audio-player .controls img, .audio-player .controls .volumeSlider {
 		display: none;
+	}
+
+	.portfolio-content .container {
+		flex-direction: column;
+		height: 70vh;
+	}
+
+	.portfolio-content .container button.portfolio-content__el {
+		width: unset;
+		margin: 10px 0px;
+	}
+
+	.portfolio-content p.header {
+		width: unset;
+		max-width: 300px;
+		height: unset;
+		font-size: calc(var(--index)* 1.75);
+		writing-mode: horizontal-tb;
 	}
 }
 
