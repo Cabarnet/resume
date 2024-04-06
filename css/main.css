@@ -506,12 +506,24 @@ body {
 
 @media (max-width: 769px) {
 	.main-content {
-		padding: calc(var(--index)* 1.5) calc(var(--index)* .1);
+		padding: calc(var(--index)* 2.5) calc(var(--index)* .1);
+	}
+
+	.main-content h1 {
+		font-size: calc(var(--index)* 1.7);
+	}
+
+	.main-content span{
+		font-size: calc(var(--index)* 1.8);
 	}
 
 	.button-main {
-		font-size: 12px;
+		font-size: 11px;
 		letter-spacing: 1px;
+	}
+
+	.button-main__text {
+		font-family: Arial, Helvetica, sans-serif;
 	}
 
 	.button-main.left .button-main__text {

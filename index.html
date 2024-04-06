@@ -46,9 +46,15 @@
 								</a>
 								<a href="mailto: vopros.tvoy@gmail.com">gmail</a>
 							</div>
+							<!-- <div>
+								<a onclick="toTop()">About me</a>
+								<a onclick="toLeft()">Skills</a>
+								<a onclick="toRight();">Experience</a>
+								<a onclick="toBottom()">Portfolio</a>
+							</div> -->
 						</div>
 						<button class="button-main right" onclick="toRight(); musicPlayer()">
-							<div class="button-main__text">Music</div>
+							<div class="button-main__text">Experience</div>
 							<svg viewBox="0 0 5 9" style="width: 12px; margin: 3px 0px 5px 15px;">
 								<path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" fill="#fff"/>
 							</svg>
@@ -95,8 +101,9 @@
 				<div class="skills-content">
 					<div style="width: 10%;"></div>
 					<div class="container">
+						<h2 class="skills-content__el">Skills</h2>
 						<div>
-							<h3 class="skills-content__el">Hard Skills: </h3>
+							<h3 class="skills-content__el">Hard: </h3>
 							<p class="skills-content__el">Html</p>
 							<p class="skills-content__el">Css</p>
 							<p class="skills-content__el">JavaScript</p>
@@ -110,7 +117,7 @@
 						</div>
 						<hr class="skills-content__el">
 						<div>
-							<h3 class="skills-content__el">Soft Skills: </h3>
+							<h3 class="skills-content__el">Soft: </h3>
 							<p class="skills-content__el">English: B1 (intermediate)</p>
 							<p class="skills-content__el">Teamwork</p>
 							<p class="skills-content__el">Multitasking</p>
@@ -120,13 +127,13 @@
 							<p class="skills-content__el">Desire to learn</p>
 							<p class="skills-content__el">Fast learning</p>
 						</div>
-						<hr class="skills-content__el">
+						<!-- <hr class="skills-content__el">
 						<div>
 							<h3 class="skills-content__el">Work Experience: </h3>
 							<p class="skills-content__el">Junior Web-developer</p>
 							<p class="skills-content__el">"Unique Technologies"</p>
 							<p class="skills-content__el">12 / 2023 - Present</p>
-						</div>
+						</div> -->
 					</div>
 					<button class="button-main right" onclick="toMainPage()">
 						<div class="button-main__text">Main page</div>
@@ -144,104 +151,8 @@
 						</svg>
 					</button>
 					<div>
-						<h2 class="music-content__el">Music</h2>
+						<h2 class="music-content__el">Work Experience</h2>
 						<div class="container">
-
-							<p class="music-content__el heading">Classic</p>
-							<div class="music-content__el audio-player">
-								<p>Mozart - Lacrimosa</p>
-								<audio id="audio1" src="audio/Mozart - Lacrimosa.mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio1">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio1" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio1">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio1">
-								</div>
-							</div>
-							<div class="music-content__el audio-player">
-								<p>Tchaikovsky - Swan Lake</p>
-								<audio id="audio2" src="audio/Tchaikovsky - Swan Lake (128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio2">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio2" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio2">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio2">
-								</div>
-							</div>
-
-							<p class="music-content__el heading">Rock</p>
-							<div class="music-content__el audio-player">
-								<p>The Beatles - Let It Be</p>
-								<audio id="audio3" src="audio/Paul McCartney - Let It Be (128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio3">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio3" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio3">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio3">
-								</div>
-							</div>
-							<div class="music-content__el audio-player">
-								<p>AC/DC - Back In Black</p>
-								<audio id="audio4" src="audio/AC_DC - Back In Black (128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio4">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio4" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio4">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio4">
-								</div>
-							</div>
-
-							<p class="music-content__el heading">Pop</p>
-							<div class="music-content__el audio-player">
-								<p>Adele - Rolling in the Deep</p>
-								<audio id="audio5" src="audio/Adele - Rolling in the Deep(128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio5">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio5" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio5">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio5">
-								</div>
-							</div>
-							<div class="music-content__el audio-player">
-								<p>Panic! At The Disco - High Hopes</p>
-								<audio id="audio6" src="audio/Panic! At The Disco - High Hopes (128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio6">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio6" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio6">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio6">
-								</div>
-							</div>
-
-							<p class="music-content__el heading">Hip-hop</p>
-							<div class="music-content__el audio-player">
-								<p>Eminem - Lose Yourself</p>
-								<audio id="audio7" src="audio/Eminem - Lose Yourself(128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio7">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio7" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio7">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio7">
-								</div>
-							</div>
-							<div class="music-content__el audio-player">
-								<p>NF - When I Grow Up</p>
-								<audio id="audio8" src="audio/NF - When I Grow Up (128 kbps).mp3" preload="metadata"></audio>
-								<div class="controls">
-									<button class="playBtn" data-audio="audio8">&#9658;</button>
-									<button class="pauseBtn" data-audio="audio8" style="display: none;">&#10074;&#10074;</button>
-									<input class="seekSlider" type="range" min="0" step="1" value="0" data-audio="audio8">
-									<img src="img/icons8-speaker-24.png" alt="speaker"/>
-									<input class="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" data-audio="audio8">
-								</div>
-							</div>
 
 						</div>
 					</div>
