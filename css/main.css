@@ -57,7 +57,7 @@ body {
 }
 
 .layer-1 {
-	/* background-image: url(../img/layer-1.jpg); */
+	background-image: url(../img/layer-1.jpg);
 	transform: translateZ(-60px) scale(1.25);
 	transition: var(--transition);
 }
@@ -462,6 +462,11 @@ body {
 		/* transform-style: unset; */
 		transform: unset;
 		will-change: unset;
+	}
+
+	.layer-1 {
+		background-image: url(../img/layer-1_mob.jpg);
+		transform: translateZ(-60px) scale(1.05);
 	}
 
 	.container {
