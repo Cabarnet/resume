@@ -57,7 +57,7 @@ body {
 }
 
 .layer-1 {
-	background-image: url(../img/layer-1.jpg);
+	/* background-image: url(../img/layer-1.jpg); */
 	transform: translateZ(-60px) scale(1.25);
 	transition: var(--transition);
 }
