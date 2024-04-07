@@ -31,7 +31,7 @@ window.addEventListener('resize', () => {
 
 function toLeft () {
     $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -10vw -10vw -2vw", "filter": "blur(3px)"});
+    $(".layer-1").css({"inset": "-10vw -10vw -10vw -2vw"});
     $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
     $(".skills-content").css("display", "flex");
     anime({
@@ -43,7 +43,7 @@ function toLeft () {
 
 function toRight () {
     $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -2vw -10vw -10vw", "filter": "blur(3px)"});
+    $(".layer-1").css({"inset": "-10vw -2vw -10vw -10vw"});
     $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
     $(".music-content").css("display", "flex");
     anime({
@@ -55,7 +55,7 @@ function toRight () {
 
 function toTop () {
     $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "0vw -10vw -10vw -10vw", "filter": "brightness(70%)"});
+    $(".layer-1").css({"inset": "0vw -10vw -10vw -10vw"});
     $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(-5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
     $(".about-content").css("display", "flex");
     anime({
@@ -70,7 +70,7 @@ function toTop () {
 
 function toBottom () {  
     $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -10vw 0vw -10vw", "filter": "brightness(70%)"});
+    $(".layer-1").css({"inset": "-10vw -10vw 0vw -10vw"});
     $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
     $(".portfolio-content").css("display", "flex");
     anime({
