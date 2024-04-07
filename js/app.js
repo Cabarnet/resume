@@ -8,32 +8,41 @@ document.addEventListener('mousemove', e => {
 })
 
 window.addEventListener('load', () => {
-    let vh = window.innerHeight * 0.01;
-    $(".layers__container").css("--vh", `${vh}px`);
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
 
-    $(".layer-1").css({"inset": "30vh 0vw", "transition": "0s"});
-    $(".main-content").css({"display": "none", "opacity": 0});
+    let layers_container = document.querySelector(".layers__container");
+    let vh = window.innerHeight * 0.01;
+    layers_container.style.cssText = `--vh: ${vh}px`;
+
+    layer_1.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0';
+    // main_content.style.cssText = 'display: none; opacity: 0';
     setTimeout(() => {
-        $(".layer-1").css({"inset": "-10vw", "transition": "var(--transition-soft)"});
-    }, "100");
-    $(".main-content").css("display", "flex");
-    anime({
-        targets: '.main-content',
-        opacity: 1,
-        easing: 'easeInOutQuad',
-    });
+        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft)';
+    }, "1");
+    // main_content.style.cssText = 'display: flex;';
+    // anime({
+    //     targets: '.main-content',
+    //     opacity: 1,
+    //     easing: 'easeInOutQuad',
+    // });
 })
 
 window.addEventListener('resize', () => {
+    let layers_container = document.querySelector(".layers__container");
     let vh = window.innerHeight * 0.01;
-    $(".layers__container").css("--vh", `${vh}px`);
+    layers_container.style.cssText = `--vh: ${vh}px`;
 });
 
 function toLeft () {
-    $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -10vw -10vw -2vw"});
-    $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
-    $(".skills-content").css("display", "flex");
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
+    let skills_content = document.querySelector(".skills-content");
+
+    main_content.style.cssText = 'display: none; opacity: 0';
+    layer_1.style.cssText = 'inset: -10vw -10vw -10vw -2vw';
+    // $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
+    skills_content.style.cssText = 'display: flex';
     anime({
         targets: '.skills-content .skills-content__el',
         opacity: 1,
@@ -42,10 +51,14 @@ function toLeft () {
 }
 
 function toRight () {
-    $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -2vw -10vw -10vw"});
-    $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
-    $(".music-content").css("display", "flex");
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
+    let music_content = document.querySelector(".music-content");
+
+    main_content.style.cssText = 'display: none; opacity: 0';
+    layer_1.style.cssText = 'inset: -10vw -2vw -10vw -10vw';
+    // $(".layer-2").css({"inset": "-5vw -10vw -10vw -15vw", "transform": "scale(0.5) rotate(-5deg)", "opacity": 0.8, "filter": "blur(4px)"});
+    music_content.style.cssText = 'display: flex';
     anime({
         targets: '.music-content .music-content__el',
         opacity: 1,
@@ -54,10 +67,14 @@ function toRight () {
 }
 
 function toTop () {
-    $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "0vw -10vw -10vw -10vw"});
-    $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(-5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
-    $(".about-content").css("display", "flex");
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
+    let about_content = document.querySelector(".about-content");
+
+    main_content.style.cssText = 'display: none; opacity: 0';
+    layer_1.style.cssText = 'inset: 0vw -10vw -10vw -10vw';
+    // $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(-5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
+    about_content.style.cssText = 'display: flex';
     anime({
         targets: '.about-content .about-content__el',
         translateY: 250,
@@ -69,10 +86,14 @@ function toTop () {
 }
 
 function toBottom () {  
-    $(".main-content").css({"display": "none", "opacity": 0});
-    $(".layer-1").css({"inset": "-10vw -10vw 0vw -10vw"});
-    $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
-    $(".portfolio-content").css("display", "flex");
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
+    let portfolio_content = document.querySelector(".portfolio-content");
+
+    main_content.style.cssText = 'display: none; opacity: 0';
+    layer_1.style.cssText = 'inset: -10vw -10vw 0vw -10vw';
+    // $(".layer-2").css({"inset": "-10vw -10vw -15vw -10vw", "transform": "scale(0.45) rotate(5deg)", "opacity": 0.9, "filter": "brightness(70%)"});
+    portfolio_content.style.cssText = 'display: flex';
     anime({
         targets: '.portfolio-content .portfolio-content__el',
         translateY: 250,
@@ -84,29 +105,39 @@ function toBottom () {
 }
 
 function toMainPage () {
-    $(".main-content").css("display", "flex");
+    let layer_1 = document.querySelector(".layer-1");
+    let main_content = document.querySelector(".main-content");
+    let skills_content = document.querySelector(".skills-content");
+    let about_content = document.querySelector(".about-content");
+    let music_content = document.querySelector(".music-content");
+    let portfolio_content = document.querySelector(".portfolio-content");
+
+    skills_content.style.cssText = 'display: none';
+    about_content.style.cssText = 'display: none';
+    music_content.style.cssText = 'display: none';
+    portfolio_content.style.cssText = 'display: none';
+
+    layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft);';
+    main_content.style.cssText = 'display: flex';
     anime({
         targets: '.main-content',
         opacity: 1,
         easing: 'easeInOutQuad',
     });
-    $(".skills-content").removeAttr('style');
-    $(".skills-content__el").removeAttr('style');
-    $(".about-content").removeAttr('style');
-    $(".about-content__el").removeAttr('style');
-    $(".music-content").removeAttr('style');
-    $(".music-content__el").removeAttr('style');
-    $(".portfolio-content").removeAttr('style');
-    $(".portfolio-content__el").removeAttr('style');
-    $(".layer-1").removeAttr('style');
-    $(".layer-2").removeAttr('style');
 }
 
 
 function openPortfolioWeather() {
-    $(".portfolio-content__el").css("display", "none");
-    $("#weather").css("display", "flex");
-    $(".portfolio-close").css("display", "block");
+    let portfolio_content__el = document.querySelectorAll(".portfolio-content__el");
+    let portfolio_content_weather = document.querySelector("#weather");
+    let portfolio_close = document.querySelector(".portfolio-close");
+
+    portfolio_content__el.forEach(function(element) {
+        element.style.display = 'none';
+    });
+
+    portfolio_content_weather.style.cssText = portfolio_content_weather.getAttribute('style') + 'display: flex';
+    portfolio_close.style.cssText = 'display: block';
     anime({
         targets: '.portfolio-close',
         opacity: 1,
