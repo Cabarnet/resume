@@ -472,7 +472,6 @@ body {
 	.layer-1 {
 		background-image: url(../img/layer-1_mob.jpg);
 		transform: translateZ(-60px) scale(1.05);
-		filter: blur(6px) brightness(0.8);
 	}
 
 	.container {
