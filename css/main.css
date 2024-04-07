@@ -470,7 +470,7 @@ body {
 	}
 
 	.layer-1 {
-		background-image: url(../img/layer-1_mob.png);
+		background-image: url(../img/layer-1_mob.webp);
 		transform: translateZ(-60px) scale(1.05);
 	}
 
