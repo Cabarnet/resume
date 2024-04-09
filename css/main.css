@@ -62,11 +62,11 @@ body {
 	transition: var(--transition);
 }
 
-/* .layer-2 {
+.layer-2 {
 	background-image: url(../img/чайка2.png);
 	transform: translateZ(10px) scale(0.6);
 	transition: var(--transition-soft);
-} */
+}
 
 .layer-3 {
 	transform: translateZ(180px) scale(0.8);
@@ -255,9 +255,9 @@ body {
     border-radius: 6px;
 }
 
-/* ############################################### MUSIC ################################################# */
+/* ############################################### EXPERIENCE ################################################# */
 
-.music-content {
+.exp-content {
 	display: none;
     align-items: center;
 	justify-content: space-between;
@@ -265,7 +265,7 @@ body {
 	padding: 10px calc(var(--index) * 1.8);
 }
 
-.music-content h2 {
+.exp-content h2 {
 	text-align: center;
 	font-family: 'Times New Roman', Times, serif;
 	font-size: calc(var(--index) * 2);
@@ -273,98 +273,18 @@ body {
 	text-transform: uppercase;
 }
 
-.music-content__el {
+.exp-content__el {
 	opacity: 0;
 }
 
-.music-content__el.heading {
-    text-align: center;
-    background: linear-gradient(90deg, transparent 40%, #004e85 43%, #00121e 57%, transparent 60%);
-	padding: 5px;
-    font-family: merriweather-italic-3d;
-	border-radius: 6px;
-}
-
-.audio-player input[type="range"] {
-    /* Установка белого цвета для фона ползунков */
-    -webkit-appearance: none; /* Отключение стилей по умолчанию */
-    appearance: none;
-	background: #e0d9f240;
-    /* border: 1px solid rgb(78, 82, 92); */
-    border-radius: 10px;
-    height: 4px;
-    width: 78%;
-	cursor: pointer;
-}
-
-.audio-player input[type="range"]:last-child {
-    /* Установка белого цвета для фона ползунков */
-    -webkit-appearance: none; /* Отключение стилей по умолчанию */
-    appearance: none;
-	background: #e0d9f2;
-    border-radius: 10px;
-    height: 4px;
-    width: 10%;
-	cursor: pointer;
-}
-
-.audio-player input[type="range"]::-webkit-slider-thumb {
-    /* Установка белого цвета для самого ползунка */
-    -webkit-appearance: none; /* Отключение стилей по умолчанию */
-    appearance: none;
-	background-color: #ffffff;
-	box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .5);
-    border-radius: 5px; /* Скругление ползунков */
-    height: 10px; /* Высота ползунков */
-    width: 18px; /* Ширина ползунков */
-	cursor: pointer;
-}
-
-.audio-player {
-    width: 100%;
-    margin: 10px auto;
-    background: #00000090;
-    padding: 8px 10px 5px 10px;
-    border-radius: 10px;
-}
-
-.audio-player p{
-    font-size: 15px;
-	padding-left: 7%;
-    letter-spacing: 0.5px;
+.exp-content p {
     font-family: Arial;
-}
-
-.audio-player .controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.audio-player .controls button{
-	background: transparent;
-	border: none;
-	color: #ffffff;
-	border-radius: 12px;
-	/* border: 3px solid #ffffff; */
-	font-size: 22px;
-	height: 26px;
-    width: 26px;
-	display: flex;
-	align-items: center;
-	padding: 0px 3px;
-	margin: 0px 10px 0px 0px;
-    outline: none;
-	cursor: pointer;
-}
-
-.audio-player .controls button.pauseBtn{
-	margin-top: -3px;
-	padding-bottom: 29px;
-}
-
-.audio-player .controls img{
-	margin: 0px 5px;
+    font-weight: 100;
+    font-size: calc(var(--index)* .5);
+    background: linear-gradient(90deg, transparent, #00000090 10%, #00000090 90%, transparent);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 7px 0px;
 }
 
 /* ######################################### PORTFOLIO ############################################# */
@@ -498,6 +418,10 @@ body {
 		font-size: calc(var(--index)* 1.35);
 	}
 
+	.skills-content h2 {
+		font-size: calc(var(--index)* 2.5);
+	}
+
 	.skills-content .container {
 		width: max-content;
 		height: max-content;
@@ -513,6 +437,20 @@ body {
 		background: #00000090;
 		padding: 7px 15px;
 		border-radius: 6px;
+	}
+
+	.exp-content h2 {
+		font-size: calc(var(--index)* 2.5);
+	}
+
+	.exp-content p {
+		font-size: calc(var(--index)* 1.1);
+		background: #00000090;
+		padding: 7px 15px;
+	}
+
+	.portfolio-content h2 {
+		font-size: calc(var(--index)* 2.5);
 	}
 	
 	.portfolio-content {
@@ -562,16 +500,8 @@ body {
 		display: none;
 	}
 
-	.music-content {
+	.exp-content {
 		padding: 10px calc(var(--index) * .8);
-	}
-
-	.music-content__el.heading {
-		background: linear-gradient(90deg, transparent 25%, #004e85 35%, #00121e 65%, transparent 75%);
-	}
-
-	.audio-player .controls img, .audio-player .controls .volumeSlider {
-		display: none;
 	}
 
 	.portfolio-content .container {
