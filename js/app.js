@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
     let vh = window.innerHeight * 0.01;
     layers_container.style.cssText = `--vh: ${vh}px`;
 
-    layer_1.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0';
+    layer_1.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
     // main_content.style.cssText = 'display: none; opacity: 0';
     setTimeout(() => {
-        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft)';
+        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft); filter: unset;';
     }, "1");
     // main_content.style.cssText = 'display: flex;';
     // anime({
