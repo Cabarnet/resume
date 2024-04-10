@@ -47,8 +47,8 @@ let portfolio_content = document.querySelector(".portfolio-content");
 
 function toLeft () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -10vw -10vw -2vw; filter: blur(4px)';
-    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: blur(4px)';
+    layer_1.style.cssText = 'inset: -10vw -10vw -10vw -2vw; filter: brightness(70%)';
+    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(70%)';
     skills_content.style.cssText = 'display: flex';
     anime({
         targets: '.skills-content .skills-content__el',
@@ -59,8 +59,8 @@ function toLeft () {
 
 function toRight () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -2vw -10vw -10vw; filter: blur(4px)';
-    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: blur(4px)';
+    layer_1.style.cssText = 'inset: -10vw -2vw -10vw -10vw; filter: brightness(70%)';
+    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(70%)';
     exp_content.style.cssText = 'display: flex';
     anime({
         targets: '.exp-content .exp-content__el',
