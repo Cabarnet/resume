@@ -250,7 +250,7 @@ body {
     font-weight: 100;
     font-size: calc(var(--index)* .5);
     text-align: center;
-    background: linear-gradient(90deg, transparent, #00000090 10%, #00000090 90%, transparent);
+	background: #00000090;
     padding: 10px 20px;
     border-radius: 6px;
 }
@@ -281,7 +281,7 @@ body {
     font-family: Arial;
     font-weight: 100;
     font-size: calc(var(--index)* .5);
-    background: linear-gradient(90deg, transparent, #00000090 10%, #00000090 90%, transparent);
+	background: #00000090;
     padding: 10px 20px;
     border-radius: 6px;
     margin: 7px 0px;
@@ -438,9 +438,7 @@ body {
 
 	.skills-content p {
 		font-size: calc(var(--index)* 1);
-		background: #00000090;
 		padding: 7px 15px;
-		border-radius: 6px;
 	}
 
 	.exp-content h2 {
@@ -449,7 +447,6 @@ body {
 
 	.exp-content p {
 		font-size: calc(var(--index)* 1.1);
-		background: #00000090;
 		padding: 7px 15px;
 	}
 

@@ -9,6 +9,7 @@ document.addEventListener('mousemove', e => {
 
 window.addEventListener('load', () => {
     let layer_1 = document.querySelector(".layer-1");
+    let layer_2 = document.querySelector(".layer-2");
     let main_content = document.querySelector(".main-content");
 
     let layers_container = document.querySelector(".layers__container");
@@ -16,9 +17,11 @@ window.addEventListener('load', () => {
     layers_container.style.cssText = `--vh: ${vh}px`;
 
     layer_1.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
+    layer_2.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
     // main_content.style.cssText = 'display: none; opacity: 0';
     setTimeout(() => {
-        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft); filter: unset;';
+        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft);';
+        layer_2.style.cssText = 'inset: -10vw;';
     }, "1");
     // main_content.style.cssText = 'display: flex;';
     // anime({
