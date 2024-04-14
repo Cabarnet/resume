@@ -121,6 +121,8 @@ function toMainPage () {
 
 let portfolio_content__el = document.querySelectorAll(".portfolio-content__el");
 let portfolio_content_weather = document.querySelector("#weather");
+let portfolio_content_appetite = document.querySelector("#appetite");
+let portfolio_content_basketball = document.querySelector("#basketball");
 let portfolio_close = document.querySelector(".portfolio-close");
 
 function openPortfolioWeather() {
@@ -128,22 +130,68 @@ function openPortfolioWeather() {
         element.style.display = 'none';
     });
 
-    portfolio_content_weather.style.cssText = 'display: flex; opacity: 1; transform: translateY(250px);';
+    portfolio_content_weather.style.cssText = 'display: flex; opacity: 1;';
     portfolio_close.style.cssText = 'display: block';
     anime({
         targets: '.portfolio-close',
         opacity: 1,
         easing: 'easeInOutQuad',
     });
+    anime({
+        targets: '.portfolio-content .portfolio-opacity',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger([800, 250])
+    });
 }
+
+function openPortfolioAppetite() {
+    portfolio_content__el.forEach(function(element) {
+        element.style.display = 'none';
+    });
+
+    portfolio_content_appetite.style.cssText = 'display: flex; opacity: 1;';
+    portfolio_close.style.cssText = 'display: block';
+    anime({
+        targets: '.portfolio-close',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+    });
+    anime({
+        targets: '.portfolio-content .portfolio-opacity',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger([800, 250])
+    });
+}
+
+function openPortfolioBasketball() {
+    portfolio_content__el.forEach(function(element) {
+        element.style.display = 'none';
+    });
+
+    portfolio_content_basketball.style.cssText = 'display: flex; opacity: 1;';
+    portfolio_close.style.cssText = 'display: block';
+    anime({
+        targets: '.portfolio-close',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+    });
+    anime({
+        targets: '.portfolio-content .portfolio-opacity',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        delay: anime.stagger([800, 250])
+    });
+}
+
 
 function closePortfolio() {
     portfolio_content__el.forEach(function(element) {
         element.style.display = '';
     });
-    // $(".portfolio-content__el").css("display", "");
     portfolio_content_weather.style.cssText = 'display: none';
-    // $("#weather").removeAttr('style');
+    portfolio_content_appetite.style.cssText = 'display: none';
+    portfolio_content_basketball.style.cssText = 'display: none';
     portfolio_close.style.cssText = 'display: none';
-    // $(".portfolio-close").removeAttr('style');
 }

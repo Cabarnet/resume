@@ -114,7 +114,6 @@
 							<p class="skills-content__el">Php</p>
 							<p class="skills-content__el">Yii2</p>
 						</div>
-						<hr class="skills-content__el">
 						<div>
 							<h3 class="skills-content__el">Soft: </h3>
 							<p class="skills-content__el">English: B1 (intermediate)</p>
@@ -145,10 +144,16 @@
 					<div>
 						<h2 class="exp-content__el">Work Experience</h2>
 						<div class="container">
-							<div>
-								<p class="exp-content__el">Junior Web-developer</p>
-								<p class="exp-content__el">Company: "Unique Technologies"</p>
-								<p class="exp-content__el">12 / 2023 - Present</p>
+							<div style="border-left: 3px solid #f30230;">
+								<div style="display: flex; flex-wrap: wrap; justify-content: space-between; text-align: center;">
+									<p class="exp-content__el" style="flex: auto;">12 / 2023 - Present</p>
+									<p class="exp-content__el" style="flex: auto;">Junior Web-developer</p>
+									<p class="exp-content__el" style="flex: auto;">Company: "Unique Technologies"</p>
+								</div>
+								<p class="exp-content__el">
+									Responsibilities: updating old sites with changing the design and adding new functions and elements.	
+								</p>
+								<p class="exp-content__el">Stack: Html, Css, JS, Figma, Git, a little bit Php.</p>
 							</div>
 						</div>
 					</div>
@@ -165,39 +170,59 @@
 					<div>
 						<h2 class="portfolio-content__el">Portfolio</h2>
 						<div class="container">
-							<p class="portfolio-content__el" style="padding: 20px; margin: 30% auto; text-transform: uppercase; font-size: 26px; font-family: Arial;">Under development</p>
-							<!-- <button class="portfolio-close" onclick="closePortfolio()"></button>
+							<!-- <p class="portfolio-content__el" style="padding: 20px; margin: 30% auto; text-transform: uppercase; font-size: 26px; font-family: Arial;">Under development</p> -->
+							<button class="portfolio-close" onclick="closePortfolio()"></button>
 
 							<button class="portfolio-content__el" onclick="openPortfolioWeather()">
 								<p class="header">Weather</p>
 							</button>
-							<div class="portfolio-item portfolio-content__el" id="weather">
-								<h3>Weather</h3>
-								<img src="img/Снимок экрана (554).png" alt="Weather">
-								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
-									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
-								<a> </a>
+							<div class="portfolio__item" id="weather">
+								<h3 class="portfolio-opacity">Weather</h3>
+								<img class="portfolio-opacity" src="img/Снимок экрана (554).png" alt="Weather">
+								<p class="portfolio-opacity">A website was developed using API keys to determine the weather in your city. 
+									There is an option to automatically receive weather by geolocation, as well as enter a city.</p>
+								<a class="portfolio-opacity" href="https://cabarnet.github.io/weather-in-your-city/">Go to site</a>
+								<div class="portfolio-close__crosshair portfolio-opacity" onclick="closePortfolio()">
+									<svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.51869 3.51869C4.21028 2.8271 5.33154 2.8271 6.02313 3.51869L43.4813 40.9768C44.1729 41.6684 44.1729 42.7897 43.4813 43.4812C42.7898 44.1729 41.6685 44.1729 40.9769 43.4812L3.51869 6.02311C2.8271 5.33154 2.8271 4.21026 3.51869 3.51869Z" fill="#FCFCFC" />
+										<path d="M43.4813 3.51868C42.7898 2.82711 41.6685 2.82711 40.9769 3.51868L3.51868 40.9769C2.82711 41.6685 2.82711 42.7898 3.51868 43.4813C4.21027 44.1729 5.33155 44.1729 6.02312 43.4813L43.4813 6.02312C44.1729 5.33155 44.1729 4.21027 43.4813 3.51868Z" fill="#FCFCFC" />
+									</svg>
+								</div>
 							</div>
 
 							<button class="portfolio-content__el" onclick="openPortfolioAppetite()">
 								<p class="header">Bon appetite</p>
 							</button>
-							<div class="portfolio-item portfolio-content__el" id="appetite">
+							<div class="portfolio__item" id="appetite">
 								<h3>Bon appetite</h3>
 								<img src="img/Снимок экрана (555).png" alt="Bon appetite">
 								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
 									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
+								<a href="https://cabarnet.github.io/weather-in-your-city/">Go to site</a>
+								<div class="portfolio-close__crosshair portfolio-opacity" onclick="closePortfolio()">
+									<svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.51869 3.51869C4.21028 2.8271 5.33154 2.8271 6.02313 3.51869L43.4813 40.9768C44.1729 41.6684 44.1729 42.7897 43.4813 43.4812C42.7898 44.1729 41.6685 44.1729 40.9769 43.4812L3.51869 6.02311C2.8271 5.33154 2.8271 4.21026 3.51869 3.51869Z" fill="#FCFCFC" />
+										<path d="M43.4813 3.51868C42.7898 2.82711 41.6685 2.82711 40.9769 3.51868L3.51868 40.9769C2.82711 41.6685 2.82711 42.7898 3.51868 43.4813C4.21027 44.1729 5.33155 44.1729 6.02312 43.4813L43.4813 6.02312C44.1729 5.33155 44.1729 4.21027 43.4813 3.51868Z" fill="#FCFCFC" />
+									</svg>
+								</div>
 							</div>
 
-							<button class="portfolio-content__el">
+							<button class="portfolio-content__el" onclick="openPortfolioBasketball()">
 								<p class="header">Basketball</p>
 							</button>
-							<div class="portfolio-item portfolio-content__el" id="basketball" onclick="openPortfolioBasketball()">
+							<div class="portfolio__item" id="basketball">
 								<h3>Basketball</h3>
 								<img src="img/Снимок экрана (556).png" alt="Basketball">
 								<p>Сайт с использованием API-ключей для определения погоды в твоём городе. 
 									Есть вариант автоматического получения погоды по геолокации, а также ввод города</p>
-							</div> -->
+								<a href="https://cabarnet.github.io/weather-in-your-city/">Go to site</a>
+								<div class="portfolio-close__crosshair portfolio-opacity" onclick="closePortfolio()">
+									<svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.51869 3.51869C4.21028 2.8271 5.33154 2.8271 6.02313 3.51869L43.4813 40.9768C44.1729 41.6684 44.1729 42.7897 43.4813 43.4812C42.7898 44.1729 41.6685 44.1729 40.9769 43.4812L3.51869 6.02311C2.8271 5.33154 2.8271 4.21026 3.51869 3.51869Z" fill="#FCFCFC" />
+										<path d="M43.4813 3.51868C42.7898 2.82711 41.6685 2.82711 40.9769 3.51868L3.51868 40.9769C2.82711 41.6685 2.82711 42.7898 3.51868 43.4813C4.21027 44.1729 5.33155 44.1729 6.02312 43.4813L43.4813 6.02312C44.1729 5.33155 44.1729 4.21027 43.4813 3.51868Z" fill="#FCFCFC" />
+									</svg>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div></div>
