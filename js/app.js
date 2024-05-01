@@ -20,8 +20,8 @@ window.addEventListener('load', () => {
     layer_2.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
     // main_content.style.cssText = 'display: none; opacity: 0';
     setTimeout(() => {
-        layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft);';
-        layer_2.style.cssText = 'inset: -10vw;';
+        layer_1.style.cssText = 'inset: 0vw; transition: var(--transition-soft); filter: brightness(0.9);';
+        layer_2.style.cssText = 'inset: -10vw; filter: brightness(0.9);';
     }, "1");
     // main_content.style.cssText = 'display: flex;';
     // anime({
@@ -50,8 +50,8 @@ let portfolio_content = document.querySelector(".portfolio-content");
 
 function toLeft () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -10vw -10vw -2vw; filter: brightness(70%)';
-    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(70%)';
+    layer_1.style.cssText = 'inset: -10vw -10vw -10vw -2vw; filter: brightness(65%)';
+    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(56%)';
     skills_content.style.cssText = 'display: flex';
     anime({
         targets: '.skills-content .skills-content__el',
@@ -62,8 +62,8 @@ function toLeft () {
 
 function toRight () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -2vw -10vw -10vw; filter: brightness(70%)';
-    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(70%)';
+    layer_1.style.cssText = 'inset: -10vw -2vw -10vw -10vw; filter: brightness(65%)';
+    layer_2.style.cssText = 'inset: -5vw -10vw -10vw -15vw; transform: scale(0.5) rotate(-5deg); opacity: 0.8; filter: brightness(65%)';
     exp_content.style.cssText = 'display: flex';
     anime({
         targets: '.exp-content .exp-content__el',
@@ -74,8 +74,8 @@ function toRight () {
 
 function toTop () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: 0vw -10vw -10vw -10vw; filter: brightness(70%)';
-    layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(70%)';
+    layer_1.style.cssText = 'inset: 0vw -10vw -10vw -10vw; filter: brightness(65%)';
+    layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(65%)';
     about_content.style.cssText = 'display: flex';
     anime({
         targets: '.about-content .about-content__el',
@@ -88,15 +88,15 @@ function toTop () {
 
 function toBottom () {  
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -10vw 0vw -10vw; filter: brightness(70%)';
-    layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(70%)';
+    layer_1.style.cssText = 'inset: -10vw -10vw 0vw -10vw; filter: brightness(65%)';
+    layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(65%)';
     portfolio_content.style.cssText = 'display: flex';
     anime({
         targets: '.portfolio-content .portfolio-content__el',
         translateY: 250,
         opacity: 1,
         easing: 'easeInOutQuad',
-        delay: anime.stagger([800, 250])
+        delay: anime.stagger([2800, 50])
     });
 }
 
@@ -106,8 +106,8 @@ function toMainPage () {
     exp_content.style.cssText = 'display: none';
     portfolio_content.style.cssText = 'display: none';
 
-    layer_2.style.cssText = 'transition: var(--transition-soft);';
-    layer_1.style.cssText = 'inset: -10vw; transition: var(--transition-soft);';
+    layer_2.style.cssText = 'transition: var(--transition-soft); filter: brightness(0.9);';
+    layer_1.style.cssText = 'inset: 0vw; transition: var(--transition-soft); filter: brightness(0.9);';
     main_content.style.cssText = 'display: flex';
     anime({
         targets: '.main-content',
@@ -194,4 +194,44 @@ function closePortfolio() {
     portfolio_content_appetite.style.cssText = 'display: none';
     portfolio_content_basketball.style.cssText = 'display: none';
     portfolio_close.style.cssText = 'display: none';
+}
+
+function portfolioBefore() {
+    let portfolio_before_img = document.querySelectorAll("#portfolio-before-img");
+    let portfolio_after_img = document.querySelectorAll("#portfolio-after-img");
+    let portfolio_before_button = document.querySelectorAll("#portfolio-before-button");
+    let portfolio_after_button = document.querySelectorAll("#portfolio-after-button");
+
+    portfolio_before_img.forEach(function(element) {
+        element.style.display = '';
+    });
+    portfolio_after_img.forEach(function(element) {
+        element.style.display = 'none';
+    });
+    portfolio_before_button.forEach(function(element) {
+        element.classList.add('active');
+    });
+    portfolio_after_button.forEach(function(element) {
+        element.classList.remove('active');
+    });
+}
+
+function portfolioAfter() {
+    let portfolio_before_img = document.querySelectorAll("#portfolio-before-img");
+    let portfolio_after_img = document.querySelectorAll("#portfolio-after-img");
+    let portfolio_before_button = document.querySelectorAll("#portfolio-before-button");
+    let portfolio_after_button = document.querySelectorAll("#portfolio-after-button");
+
+    portfolio_after_img.forEach(function(element) {
+        element.style.display = '';
+    });
+    portfolio_before_img.forEach(function(element) {
+        element.style.display = 'none';
+    });
+    portfolio_after_button.forEach(function(element) {
+        element.classList.add('active');
+    });
+    portfolio_before_button.forEach(function(element) {
+        element.classList.remove('active');
+    });
 }
