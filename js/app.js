@@ -16,11 +16,11 @@ window.addEventListener('load', () => {
     let vh = window.innerHeight * 0.01;
     layers_container.style.cssText = `--vh: ${vh}px`;
 
-    layer_1.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
-    layer_2.style.cssText = 'inset: 0vw; transition: 0s; opacity: 0; filter: blur(100px);';
+    layer_1.style.cssText = 'inset: -1vw; transition: 0s; opacity: 0; filter: blur(100px);';
+    layer_2.style.cssText = 'inset: -1vw; transition: 0s; opacity: 0; filter: blur(100px);';
     // main_content.style.cssText = 'display: none; opacity: 0';
     setTimeout(() => {
-        layer_1.style.cssText = 'inset: 0vw; transition: var(--transition-soft); filter: brightness(0.9);';
+        layer_1.style.cssText = 'inset: -1vw; transition: var(--transition-soft); filter: brightness(0.9);';
         layer_2.style.cssText = 'inset: -10vw; filter: brightness(0.9);';
     }, "1");
     // main_content.style.cssText = 'display: flex;';
@@ -74,7 +74,7 @@ function toRight () {
 
 function toTop () {
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: 0vw -10vw -10vw -10vw; filter: brightness(65%)';
+    layer_1.style.cssText = 'inset: -1vw -10vw -10vw -10vw; filter: brightness(65%)';
     layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(65%)';
     about_content.style.cssText = 'display: flex';
     anime({
@@ -88,7 +88,7 @@ function toTop () {
 
 function toBottom () {  
     main_content.style.cssText = 'display: none; opacity: 0';
-    layer_1.style.cssText = 'inset: -10vw -10vw 0vw -10vw; filter: brightness(65%)';
+    layer_1.style.cssText = 'inset: -10vw -10vw -1vw -10vw; filter: brightness(65%)';
     layer_2.style.cssText = 'inset: -10vw -10vw -10vw -12vw; transform: scale(0.52) rotate(-5deg); opacity: 0.9; filter: brightness(65%)';
     portfolio_content.style.cssText = 'display: flex';
     anime({
@@ -107,7 +107,7 @@ function toMainPage () {
     portfolio_content.style.cssText = 'display: none';
 
     layer_2.style.cssText = 'transition: var(--transition-soft); filter: brightness(0.9);';
-    layer_1.style.cssText = 'inset: 0vw; transition: var(--transition-soft); filter: brightness(0.9);';
+    layer_1.style.cssText = 'inset: -1vw; transition: var(--transition-soft); filter: brightness(0.9);';
     main_content.style.cssText = 'display: flex';
     anime({
         targets: '.main-content',
