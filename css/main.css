@@ -88,9 +88,6 @@ body {
 	flex-direction: column;
 	align-items: center;
     justify-content: space-between;
-	background: -webkit-linear-gradient(90deg,#f2e3e3,#f9f8fb,#e0d9f2); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(90deg,#f2e3e3,#f9f8fb,#e0d9f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
     color: white;
 	padding: calc(var(--index) * 2);
 	opacity: 1;
@@ -162,6 +159,8 @@ body {
 	height: 100%;
 	font-size: calc(var(--index) * 1.2);
 	transition: 0.3s;
+    color: white;
+    text-decoration: none;
 }
 
 .main-content__middle__center a img {
@@ -388,7 +387,7 @@ body {
     padding: 10px;
     border: 1px solid transparent;
     background: transparent;
-    color: black;
+    color: white;
     border-radius: 10px;
 	cursor: pointer;
 }
